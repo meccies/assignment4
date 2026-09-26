@@ -3,21 +3,34 @@ using UnityEngine;
 public class BasketMovement : MonoBehaviour
 {
     public Vector3 basketPosition;
+    public float basketRange = 2f;
     public Vector3 basketEndPosition;
+    //public Vector3 basketEndPosition;
     public float basketSpeed = 5f;
-    public bool goingUp = true;
-    private Rigidbody rb;
+    //public bool goingUp = true;
+    //private Rigidbody rb;
 
     void Start()
     {
         basketPosition = transform.position;
-        rb = GetComponent<Rigidbody>();
+        basketEndPosition = new Vector3(basketPosition.x, basketPosition.y + basketRange, basketPosition.z);
+        Debug.Log("Basket Position: " + basketPosition);
+        Debug.Log("Basket End Position: " + basketEndPosition);
+        //rb = GetComponent<Rigidbody>();
     }
 
-
-
-    void FixedUpdate()
+    void Update()
     {
+        transform.position = new Vector3(Mathf.PingPong(Time.time * basketSpeed, basketRange) + basketPosition.x, basketPosition.y, basketPosition.z);
+    }
+
+    // void FixedUpdate()
+    // {
+        
+    // }
+
+    //void FixedUpdate()
+    //{
         // if (basketPosition != basketEndPosition && goingUp)
         // {
         //     transform.Translate(Vector3.Lerp(basketPosition, basketEndPosition, Time.deltaTime * basketSpeed));
@@ -35,5 +48,5 @@ public class BasketMovement : MonoBehaviour
         //     goingUp = true;
         // }
 
-    }
+   // }
 }
