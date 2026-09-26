@@ -5,25 +5,34 @@ public class BasketMovement : MonoBehaviour
     public Vector3 basketPosition;
     public float basketRange = 2f;
     public Vector3 basketEndPosition;
-    //public Vector3 basketEndPosition;
     public float basketSpeed = 5f;
+    //public Vector3 basketEndPosition;
     //public bool goingUp = true;
     //private Rigidbody rb;
     public Throw throwscript;
      public float resetTimer = 0f;
+     // private Rigidbody rb;
+    private Vector3 movementForce;
     
-
-    void Start()
+    
+    void Awake()
     {
-        basketPosition = transform.position;
+         basketPosition = transform.position;
         basketEndPosition = new Vector3(basketPosition.x, basketPosition.y + basketRange, basketPosition.z);
-        Debug.Log("Basket Position: " + basketPosition);
-        Debug.Log("Basket End Position: " + basketEndPosition);
-        //rb = GetComponent<Rigidbody>();
     }
+    //  void Start()
+    // {
+       
+    // //     Debug.Log("Basket Position: " + basketPosition);
+    // //     Debug.Log("Basket End Position: " + basketEndPosition);
+    // //     Debug.Log("Basket Speed: " + basketSpeed);
+    // //     //basketSpeed = throwscript.colisionCount + 1f * 5f;
+    //   //   rb = GetComponent<Rigidbody>();
+    //  }
 
     void Update()
     {
+        basketSpeed = throwscript.colisionCount + 3f;
         //increase basket speed when the player scores a point
         // if(throwscript.instantHaswon)
         // {
@@ -39,13 +48,13 @@ public class BasketMovement : MonoBehaviour
 
 
         // }
-        
         transform.position = new Vector3(Mathf.PingPong(Time.time * basketSpeed, basketRange) + basketPosition.x, basketPosition.y, basketPosition.z);
+        //movementForce = new Vector3(Mathf.PingPong(Time.time * basketSpeed, basketRange) + basketPosition.x, basketPosition.y, basketPosition.z);
     }
 
     // void FixedUpdate()
     // {
-        
+    //     rb.AddForce(movementForce);
     // }
 
     //void FixedUpdate()
