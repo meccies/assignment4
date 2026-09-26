@@ -119,6 +119,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &193201995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193201996}
+  - component: {fileID: 193201997}
+  m_Layer: 0
+  m_Name: win
+  m_TagString: WinColider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193201996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193201995}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.8546092, y: -0, z: -0, w: 0.51927185}
+  m_LocalPosition: {x: -0.00094004784, y: 0.007238971, z: 0.01665992}
+  m_LocalScale: {x: 0.12605812, y: 0.12605809, z: 0.12605809}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1323123061}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &193201997
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193201995}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +363,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2117516159350925414, guid: 9ff35be137c0fb8469478f8d9709c8ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 193201996}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1596874711050138332, guid: 9ff35be137c0fb8469478f8d9709c8ce, type: 3}
       insertIndex: -1
@@ -809,6 +865,11 @@ MonoBehaviour:
   basketRange: 8
   basketEndPosition: {x: 1, y: 0, z: 0}
   basketSpeed: 3
+--- !u!4 &1323123061 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2117516159350925414, guid: 9ff35be137c0fb8469478f8d9709c8ce, type: 3}
+  m_PrefabInstance: {fileID: 361052433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1545192236660987385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -895,6 +956,9 @@ MonoBehaviour:
   throwForce: 6.2
   throwUpwardForce: 8
   spawnPosition: {x: 0, y: 0, z: 0}
+  resetDelay: 2
+  resetTimer: 0
+  haswon: 0
 --- !u!135 &7926347317289313549
 SphereCollider:
   m_ObjectHideFlags: 0
