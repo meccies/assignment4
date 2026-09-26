@@ -9,6 +9,9 @@ public class Throw : MonoBehaviour
     public float resetDelay = .5f;
     public float resetTimer = 0f;
     public bool haswon = false;
+    public bool instantHaswon = false;
+
+    // public float score = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,13 +26,14 @@ public class Throw : MonoBehaviour
         {
             ThrowBall();
         }
+        instantHaswon = false; // Reset the instantHaswon flag at the start of each frame
         if (haswon)
             {
-                Debug.Log("Reset Timer: " + resetTimer);
+               // Debug.Log("Reset Timer: " + resetTimer);
                 resetTimer -= Time.deltaTime;
                 if (resetTimer <= 0f)
                 {
-                    Debug.Log("Resetting Ball");
+                    //Debug.Log("Resetting Ball");
                     ResetBall();
                     resetTimer = 0f; // Reset the timer after resetting the ball
                     haswon = false; // Reset the win condition
@@ -58,8 +62,11 @@ public class Throw : MonoBehaviour
     {
         if (other.gameObject.CompareTag("WinColider"))
         {
-            Debug.Log("Win!");
+
+            //Debug.Log("Win!");
             haswon = true;
+            instantHaswon = true;
+            // score ++;
             resetTimer = resetDelay; // Set the reset timer to the delay value to trigger immediate reset
 
             // resetTimer += Time.deltaTime;

@@ -9,6 +9,9 @@ public class BasketMovement : MonoBehaviour
     public float basketSpeed = 5f;
     //public bool goingUp = true;
     //private Rigidbody rb;
+    public Throw throwscript;
+     public float resetTimer = 0f;
+    
 
     void Start()
     {
@@ -21,6 +24,22 @@ public class BasketMovement : MonoBehaviour
 
     void Update()
     {
+        //increase basket speed when the player scores a point
+        // if(throwscript.instantHaswon)
+        // {
+        //    resetTimer -= Time.deltaTime;
+        //         if (resetTimer <= 0f)
+        //         {
+        //             //Debug.Log("Resetting Ball");
+        //             basketSpeed ++;
+        //             Debug.Log("Basket Speed Increased to: " + basketSpeed);
+        //             resetTimer = 0f; // Reset the timer after resetting the ball
+        //         }
+           
+
+
+        // }
+        
         transform.position = new Vector3(Mathf.PingPong(Time.time * basketSpeed, basketRange) + basketPosition.x, basketPosition.y, basketPosition.z);
     }
 

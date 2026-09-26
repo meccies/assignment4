@@ -800,6 +800,8 @@ MonoBehaviour:
   basketRange: 15
   basketEndPosition: {x: 1, y: 0, z: 0}
   basketSpeed: 2
+  throwscript: {fileID: 0}
+  thisHasWon: 0
 --- !u!64 &1145588747
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -865,6 +867,8 @@ MonoBehaviour:
   basketRange: 8
   basketEndPosition: {x: 1, y: 0, z: 0}
   basketSpeed: 3
+  throwscript: {fileID: 7926347317289313545}
+  thisHasWon: 0
 --- !u!4 &1323123061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2117516159350925414, guid: 9ff35be137c0fb8469478f8d9709c8ce, type: 3}
