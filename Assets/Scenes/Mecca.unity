@@ -478,6 +478,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3460660087009042624, guid: 9a6bd0a5853f1c14a8ed31c91babdac7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1696197126}
+    - targetCorrespondingSourceObject: {fileID: 3460660087009042624, guid: 9a6bd0a5853f1c14a8ed31c91babdac7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696197132}
   m_SourcePrefab: {fileID: 100100000, guid: 9a6bd0a5853f1c14a8ed31c91babdac7, type: 3}
 --- !u!1001 &1114066692
 PrefabInstance:
@@ -711,7 +714,7 @@ GameObject:
   - component: {fileID: 1213692714}
   - component: {fileID: 1213692713}
   m_Layer: 5
-  m_Name: Max score text
+  m_Name: MaxScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1345,6 +1348,19 @@ MonoBehaviour:
   haswon: 0
   instantHaswon: 0
   colisionCount: 0
+--- !u!114 &1696197132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696197125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c360153acba3f804cbf7152a71cbe94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreManagerTest
+  currentScore: {fileID: 1816766791}
 --- !u!1 &1816766789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1373,7 @@ GameObject:
   - component: {fileID: 1816766792}
   - component: {fileID: 1816766791}
   m_Layer: 5
-  m_Name: Score counter text
+  m_Name: CurrentScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
