@@ -260,8 +260,8 @@ GameObject:
   - component: {fileID: 432817850}
   - component: {fileID: 432817849}
   - component: {fileID: 432817848}
-  - component: {fileID: 432817852}
   - component: {fileID: 432817853}
+  - component: {fileID: 432817854}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -318,8 +318,8 @@ Canvas:
   m_GameObject: {fileID: 432817847}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1096247914}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -356,18 +356,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &432817852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432817847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d08b41a2cd46df4994a3d3e6e50f5f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuitGame
 --- !u!114 &432817853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +368,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b2ed6a8729cd24394813690fee0e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestartWinScreen
+--- !u!114 &432817854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432817847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d69582c0988e3418b019530dc07703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonControler
 --- !u!1 &479889703
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Again
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95bab2f480375234fb543301627b5b76, type: 2}
   m_sharedMaterial: {fileID: -588759134118850290, guid: 95bab2f480375234fb543301627b5b76, type: 2}
@@ -834,7 +834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 189.26001}
+  m_AnchoredPosition: {x: 0, y: 164}
   m_SizeDelta: {x: 751.588, y: 154.649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800266549
@@ -1273,7 +1273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -213.521}
+  m_AnchoredPosition: {x: 0, y: -179.26}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224030888
@@ -1320,8 +1320,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 432817852}
-        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+      - m_Target: {fileID: 432817854}
+        m_TargetAssemblyTypeName: ButtonControler, Assembly-CSharp
         m_MethodName: MyQuit
         m_Mode: 1
         m_Arguments:
@@ -1670,7 +1670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -76}
+  m_AnchoredPosition: {x: 0, y: -41.739002}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775946522
@@ -1717,9 +1717,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 432817853}
-        m_TargetAssemblyTypeName: RestartWinScreen, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 432817854}
+        m_TargetAssemblyTypeName: ButtonControler, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1728,7 +1728,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1775946523
 MonoBehaviour:
   m_ObjectHideFlags: 0
