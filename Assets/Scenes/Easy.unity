@@ -2247,7 +2247,7 @@ MonoBehaviour:
   basketRange: 11.4
   basketEndPosition: {x: 1, y: 0, z: 0}
   basketSpeed: 1
-  throwscript: {fileID: 7926347317289313545}
+  throwscript: {fileID: 7926347317289313559}
   resetTimer: 0
 --- !u!4 &1323123061 stripped
 Transform:
@@ -3331,6 +3331,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3460660087009042624, guid: 9a6bd0a5853f1c14a8ed31c91babdac7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7926347317289313555}
+    - targetCorrespondingSourceObject: {fileID: 3460660087009042624, guid: 9a6bd0a5853f1c14a8ed31c91babdac7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7926347317289313559}
   m_SourcePrefab: {fileID: 100100000, guid: 9a6bd0a5853f1c14a8ed31c91babdac7, type: 3}
 --- !u!1 &6192726817016757104 stripped
 GameObject:
@@ -3344,7 +3347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6192726817016757104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5975ee82162b7924b8da151ee1f4f503, type: 3}
   m_Name: 
@@ -3516,6 +3519,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7926347317289313559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192726817016757104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1dffc58bc5742498439f52f0949560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Throw1
+  throwForce: 6.2
+  throwUpwardForce: 8
+  spawnPosition: {x: 0, y: 0, z: 0}
+  resetDelay: 2
+  resetTimer: 0
+  haswon: 0
+  instantHaswon: 0
+  colisionCount: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

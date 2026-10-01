@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasketMovement : MonoBehaviour
+public class BasketMovement1 : MonoBehaviour
 {
     public Vector3 basketPosition;
     public float basketRange = 2f;
@@ -9,7 +9,7 @@ public class BasketMovement : MonoBehaviour
     //public Vector3 basketEndPosition;
     //public bool goingUp = true;
     //private Rigidbody rb;
-    public Throw1 throwscript;
+    public Throw throwscript;
      public float resetTimer = 0f;
      // private Rigidbody rb;
     private Vector3 movementForce;
