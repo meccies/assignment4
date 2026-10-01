@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ScoreManagerTest : MonoBehaviour
@@ -16,7 +17,7 @@ public class ScoreManagerTest : MonoBehaviour
 
         if (score >= maxScore)
         {
-            Time.timeScale = 0;
+            Restart();
             Debug.Log("Max score reached");
         }
 
@@ -32,5 +33,9 @@ public class ScoreManagerTest : MonoBehaviour
         }
     }
 
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
 // Note: Attach this script to the Paper ball prefab/GameObject! Make sure to select "Current Score" TMP
