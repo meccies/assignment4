@@ -10,14 +10,4 @@ public class RestartWinScreen : MonoBehaviour
         Debug.Log("Play again button - game restarted");
         
     }
-  
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

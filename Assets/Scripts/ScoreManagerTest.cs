@@ -17,7 +17,8 @@ public class ScoreManagerTest : MonoBehaviour
 
         if (score >= maxScore)
         {
-            Restart();
+            SceneManager.LoadScene("WinScreen");
+
             Debug.Log("Max score reached");
         }
 
@@ -31,11 +32,6 @@ public class ScoreManagerTest : MonoBehaviour
         {
             AddScore(1);
         }
-    }
-
-    void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 // Note: Attach this script to the Paper ball prefab/GameObject! Make sure to select "Current Score" TMP
