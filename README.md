@@ -13,6 +13,8 @@ GA108 - Basket Catch, Week 4
 
 "Chewed Gum" (https://sketchfab.com/3d-models/chewed-gum-47491739cc2944aeb2fb329c2ad9cebd) by kimlaughton (Free Standard).
 
+Main Level BG from Puyo Puyo Champions
+
 // SFX & Music used:
 
 "Retro Arcade Game Music" by Monume (https://pixabay.com/music/video-games-retro-arcade-game-music-577980/).
